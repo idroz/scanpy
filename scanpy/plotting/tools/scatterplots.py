@@ -47,6 +47,23 @@ def tsne(adata, **kwargs):
     """
     return plot_scatter(adata, basis='tsne', **kwargs)
 
+@doc_params(adata_color_etc=doc_adata_color_etc, edges_arrows=doc_edges_arrows, scatter_bulk=doc_scatter_bulk, show_save_ax=doc_show_save_ax)
+def ivis(adata, **kwargs):
+    """\
+    Scatter plot in IVIS basis.
+
+    Parameters
+    ----------
+    {adata_color_etc}
+    {edges_arrows}
+    {scatter_bulk}
+    {show_save_ax}
+
+    Returns
+    -------
+    If `show==False` a `matplotlib.Axis` or a list of it.
+    """
+    return plot_scatter(adata, basis='ivis', **kwargs)
 
 @doc_params(adata_color_etc=doc_adata_color_etc, edges_arrows=doc_edges_arrows, scatter_bulk=doc_scatter_bulk, show_save_ax=doc_show_save_ax)
 def phate(adata, **kwargs):
@@ -660,6 +677,7 @@ def _basis2name(basis):
     component_name = (
         'DC' if basis == 'diffmap'
         else 'tSNE' if basis == 'tsne'
+        else 'ivis' if basis == 'ivis'
         else 'UMAP' if basis == 'umap'
         else 'PC' if basis == 'pca'
         else basis.replace('draw_graph_', '').upper() if 'draw_graph' in basis
