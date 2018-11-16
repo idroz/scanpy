@@ -64,7 +64,8 @@ def ivis(
     adata = adata.copy() if copy else adata
 
     X = choose_representation(adata, use_rep=use_rep, n_pcs=n_pcs)
-    params_ivis = {'embedding_dims': embedding_dims,
+    params_ivis = {'model': model, 
+                   'embedding_dims': embedding_dims,
                    'k': k,
                    'distance': distance,
                    'batch_size': batch_size,
