@@ -6,6 +6,7 @@ from .. import logging as logg
 @doc_params(doc_n_pcs=doc_n_pcs, use_rep=doc_use_rep)
 def ivis(
     adata,
+    model = None,
     use_rep=None,
     n_pcs=None,
     embedding_dims=2,
