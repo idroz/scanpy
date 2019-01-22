@@ -3,6 +3,7 @@ from .tsne import tsne
 from .umap import umap
 from .diffmap import diffmap
 from .draw_graph import draw_graph
+from .ivis import ivis
 
 from .paga import paga, paga_degrees, paga_expression_entropies, paga_compare_paths
 from .rank_genes_groups import rank_genes_groups

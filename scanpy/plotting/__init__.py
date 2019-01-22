@@ -103,7 +103,7 @@ from .anndata import scatter, violin, ranking, clustermap, stacked_violin, heatm
 
 from .preprocessing import filter_genes_dispersion, highly_variable_genes
 
-from .tools.scatterplots import pca, diffmap, draw_graph, tsne, phate, umap
+from .tools.scatterplots import pca, diffmap, draw_graph, tsne, phate, umap, ivis
 from .tools import pca_loadings, pca_scatter, pca_overview, pca_variance_ratio
 from .tools.paga import paga, paga_adjacency, paga_compare, paga_path
 from .tools import dpt_timeseries, dpt_groups_pseudotime
